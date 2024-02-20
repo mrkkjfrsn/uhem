@@ -11,21 +11,24 @@ if(!isset($admin_id)){
 }
 
 if(isset($_POST['delete'])){
-
-   $p_id = $_POST['post_id'];
-   $p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
-   $delete_image = $conn->prepare("SELECT * FROM `posts` WHERE id = ?");
-   $delete_image->execute([$p_id]);
-   $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
-   if($fetch_delete_image['image'] != ''){
-      unlink('../uploaded_images/'.$fetch_delete_image['image']);
+   $delete_id = $_POST['post_id'];
+   $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
+   $select_image = $conn->prepare("SELECT * from `posts` where id = ?");
+   $select_image->execute([$delete_id]);
+   $fetch_image = $select_image->fetch(PDO::FETCH_ASSOC);
+   if($fetch_image['image'] != ''){
+       unlink('../uploaded_images/'.$fetch_image['image']);
    }
-   $delete_post = $conn->prepare("DELETE FROM `posts` WHERE id = ?");
-   $delete_post->execute([$p_id]);
-   $delete_comments = $conn->prepare("DELETE FROM `comments` WHERE post_id = ?");
-   $delete_comments->execute([$p_id]);
-   $message[] = 'post deleted successfully!';
+   $delete_comments = $conn->prepare("DELETE from `comments` where post_id = ?");
+   $delete_comments->execute([$delete_id]);
 
+   $delete_likes = $conn->prepare("DELETE from `likes` where post_id = ?");
+   $delete_likes->execute([$delete_id]);
+
+   $delete_post = $conn->prepare("DELETE from `posts` where id = ?");
+   $delete_post->execute([$delete_id]);
+
+   $message[] = 'post deleted successfully';
 }
 
 ?>
@@ -53,6 +56,11 @@ if(isset($_POST['delete'])){
 <section class="show-posts">
 
    <h1 class="heading">your posts</h1>
+   
+   <form action="search_page.php" method="post" class="search-form">
+   <input type="text" placeholder="search posts...." required maxlength="100" name="search_box">
+   <button class="fas fa-search" name="search_btn"></button>
+   </form>
 
    <div class="box-container">
 
