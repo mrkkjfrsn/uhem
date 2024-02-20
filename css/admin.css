@@ -49,6 +49,38 @@ section {
   margin: 0 auto;
 }
 
+.message {
+  background-color: var(--white);
+  border-bottom: var(--border);
+  box-shadow: var(--box-shadow);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+
+}
+.message span {
+  font-size: 2rem;
+  color: var(--black);
+}
+.message i {
+  color: var(--red);
+  cursor: pointer;
+  font-size: 2.5rem;
+  cursor: pointer;
+  transition: .2s linear;
+}
+.message i:hover {
+  transform: rotate(90deg);
+  color: var(--black);
+}
+
+
+
 .btn,
 .option-btn,
 .delete-btn,
@@ -63,6 +95,7 @@ section {
   cursor: pointer;
   padding: 1rem 3rem;
   text-align: center;
+  text-transform: capitalize;
 }
 .option-btn,
 .btn,
@@ -210,6 +243,51 @@ section {
      font-size: 1.8rem;
      border: var(--border);
 }
+
+.form-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-container form {
+  background-color: var(--white);
+  border-radius: .5rem;
+  border: var(--border);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+  text-align: center;
+  width: 50rem;
+}
+.form-container form h3 {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: uppercase;
+  padding-bottom: 1rem;
+
+}
+.form-container form p {
+  padding-bottom: 1rem;
+  padding-top: .5rem;
+  font-size: 1.8rem;
+  color: var(--light-color);
+}
+.form-container form p span {
+  color: var(--main-color);
+}
+.form-container form .box {
+  width: 100%;
+  background-color: var(--light-bg);
+  border-radius: .5rem;
+  border: var(--border);
+  padding: 1.4rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  margin: 1rem 0;
+}
+
+
+
 
 /* media queries starts  */
 @media (max-width: 991px) {

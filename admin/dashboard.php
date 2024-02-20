@@ -2,14 +2,13 @@
 include '../components/connect.php';
 session_start();
 
-if (!isset($_SESSION['admin_id'])) {
+$admin_id = $_SESSION['admin_id'];
+
+if (!isset($_SESSION[$admin_id])) {
     // header("location: admin_login.php");
-    $admin_id = 1;
-} else {
-    $admin_id = $_SESSION['admin_id'];
+//   $_SESSION['admin_id'] = 1;
+
 }
-
-
 ?>
 
 <!DOCTYPE html>
@@ -17,6 +16,7 @@ if (!isset($_SESSION['admin_id'])) {
 
 <head>
     <meta charset="UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dashboard</title>
 

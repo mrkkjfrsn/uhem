@@ -1,20 +1,26 @@
+<?php
+if (isset($message)) {
+    foreach ($message as $message) {
+        echo '<div class="message">
+        <span>' . $message . '</span>
+        <i class="fas fa-times" onclick="this.parentElement.remove();"></i>
+        </div>';
+    }
+}
+?>
+
+
 <header class="header">
     <a href="dashboard.php" class="logo">Admin <span>Panel</span></a>
     <div class="profile">
+
         <?php
         $select_profile = $conn->prepare("SELECT * from `admin` where id = ?");
         $select_profile->execute([$admin_id]);
         $fetch_profile = $select_profile->fetch(PDO::FETCH_ASSOC);
         ?>
 
-
-        <?php
-        if ($fetch_profile !== false) {
-            echo "<p>" . $fetch_profile['name'] . "</p>";
-        } else {
-            echo "<p>No profile found</p>";
-        }
-        ?>
+        <p><?= $fetch_profile['name']; ?></p>;
         <a href="update_profile.php" class="btn">update profile</a>
 
     </div>
