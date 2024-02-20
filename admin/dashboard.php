@@ -6,7 +6,7 @@ $admin_id = $_SESSION['admin_id'];
 
 if (!isset($_SESSION[$admin_id])) {
     // header("location: admin_login.php");
-//   $_SESSION['admin_id'] = 1;
+  $_SESSION['admin_id'] = 1;
 
 }
 ?>
