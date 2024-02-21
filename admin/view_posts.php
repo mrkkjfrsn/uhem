@@ -93,7 +93,7 @@ if(isset($_POST['delete'])){
             <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
          </div>
          <div class="flex-btn">
-            <a href="edit_post.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
+            <a href="edit_posts.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
             <button type="submit" name="delete" class="delete-btn" onclick="return confirm('delete this post?');">delete</button>
          </div>
          <a href="read_post.php?post_id=<?= $post_id; ?>" class="btn">view post</a>
