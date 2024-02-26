@@ -149,6 +149,7 @@ if(isset($_POST['draft'])){
                 <option value="health and fitness">health and fitness</option>
                 <option value="business">business</option>
                 <option value="shopping">shopping</option>
+                
             </select>
             <p>post image</p>
             <input type="file" name="image" accept="image/jpg, image/jpeg, image/png, image/webp" class="box">
