@@ -48,53 +48,53 @@ section {
   max-width: 1200px;
   margin: 0 auto;
 }
-.message{
+.message {
   position: sticky;
-  top:0;
-  margin:0 auto;
+  top: 0;
+  margin: 0 auto;
   background-color: var(--white);
-  padding:2rem;
+  padding: 2rem;
   display: flex;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   justify-content: space-between;
   box-shadow: var(--box-shadow);
-  border-bottom:var(--border);
+  border-bottom: var(--border);
 }
 
-.message span{
+.message span {
   font-size: 2rem;
-  color:var(--black);
+  color: var(--black);
 }
 
-.message i{
+.message i {
   font-size: 2.5rem;
-  color:var(--red);
+  color: var(--red);
   cursor: pointer;
 }
 
-.message i:hover{
-  color:var(--black);
+.message i:hover {
+  color: var(--black);
 }
 
-.heading{
+.heading {
   text-align: center;
   margin-bottom: 2rem;
   text-transform: capitalize;
-  color:var(--black);
+  color: var(--black);
   font-size: 3rem;
 }
 
-.empty{
-  border:var(--border);
-  border-radius: .5rem;
+.empty {
+  border: var(--border);
+  border-radius: 0.5rem;
   background-color: var(--white);
-  padding:1.5rem;
+  padding: 1.5rem;
   text-align: center;
   width: 100%;
   font-size: 2rem;
   text-transform: capitalize;
-  color:var(--red);
+  color: var(--red);
   box-shadow: var(--box-shadow);
 }
 
@@ -164,14 +164,15 @@ section {
   margin-bottom: 2rem;
   text-transform: capitalize;
 }
-.header{
+.header {
   position: fixed;
-  top:0; left:0;
+  top: 0;
+  left: 0;
   background-color: var(--white);
   z-index: 1000;
   border-right: var(--border);
   width: 35rem;
-  padding:2rem;
+  padding: 2rem;
   min-height: 100vh;
   text-align: center;
 }
@@ -309,137 +310,137 @@ section {
   color: var(--black);
   margin: 1rem 0;
 }
-.post-editor form{
+.post-editor form {
   background-color: var(--white);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   border: var(--border);
-  padding:2rem;
+  padding: 2rem;
   box-shadow: var(--box-shadow);
   max-width: 80rem;
-  margin:0 auto;
+  margin: 0 auto;
   padding-top: 1rem;
 }
 
-.post-editor form p{
+.post-editor form p {
   font-size: 1.8rem;
-  color:var(--light-color);
+  color: var(--light-color);
   padding-top: 1rem;
 }
 
-.post-editor form p span{
-  color:var(--red);
+.post-editor form p span {
+  color: var(--red);
 }
 
-.post-editor form .box{
+.post-editor form .box {
   width: 100%;
-  margin:1rem 0;
-  border-radius: .5rem;
+  margin: 1rem 0;
+  border-radius: 0.5rem;
   border: var(--border);
-  padding:1.4rem;
+  padding: 1.4rem;
   font-size: 1.8rem;
-  color:var(--black);
+  color: var(--black);
   background-color: var(--light-bg);
 }
 
-.post-editor form textarea{
+.post-editor form textarea {
   height: 40rem;
   resize: none;
 }
 
-.post-editor form .image{
+.post-editor form .image {
   width: 100%;
   height: 20rem;
   object-fit: contain;
-  margin:1rem 0;
+  margin: 1rem 0;
 }
 
-.show-posts .box-container{
+.show-posts .box-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, 33rem);
-  gap:1.5rem;
+  gap: 1.5rem;
   justify-content: center;
   align-items: flex-start;
 }
 
-.show-posts .box-container .box{
+.show-posts .box-container .box {
   background-color: var(--white);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
-  border:var(--border);
-  padding:2rem;
+  border: var(--border);
+  padding: 2rem;
   overflow: hidden;
 }
 
-.show-posts .box-container .box .image{
+.show-posts .box-container .box .image {
   height: 20rem;
   width: 100%;
   object-fit: contain;
   margin-bottom: 1rem;
 }
 
-.show-posts .box-container .box .status{
+.show-posts .box-container .box .status {
   font-size: 1.8rem;
   margin-bottom: 1rem;
-  padding:.5rem 1rem;
-  border-radius: .5rem;
-  color:var(--white);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: var(--white);
   display: inline-block;
   margin-bottom: 1rem;
 }
 
-.show-posts .box-container .box .title{
+.show-posts .box-container .box .title {
   font-size: 2rem;
-  color:var(--black);
+  color: var(--black);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding:.5rem 0;
+  padding: 0.5rem 0;
   min-width: 100%;
 }
 
-.show-posts .box-container .box .posts-content{
+.show-posts .box-container .box .posts-content {
   font-size: 1.7rem;
-  color:var(--light-color);
+  color: var(--light-color);
   line-height: 1.5;
-  padding:1rem 0;
+  padding: 1rem 0;
 }
 
-.show-posts .box-container .box .posts-content::after{
-  content: '...';
+.show-posts .box-container .box .posts-content::after {
+  content: "...";
 }
 
-.show-posts .box-container .box .icons{
+.show-posts .box-container .box .icons {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap:1rem;
+  gap: 1rem;
   background-color: var(--light-bg);
-  border-radius: .5rem;
-  padding:1.5rem 2rem;
-  border:var(--border);
-  margin:.5rem 0;
+  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
+  border: var(--border);
+  margin: 0.5rem 0;
 }
 
-.show-posts .box-container .box .icons div{
+.show-posts .box-container .box .icons div {
   font-size: 1.8rem;
 }
 
-.show-posts .box-container .box .icons div span{
-  color:var(--main-color);
+.show-posts .box-container .box .icons div span {
+  color: var(--main-color);
 }
 
-.show-posts .box-container .box .icons div i{
-  color:var(--light-color);
-  margin-right: .5rem;
+.show-posts .box-container .box .icons div i {
+  color: var(--light-color);
+  margin-right: 0.5rem;
 }
 
 .show-posts .search-form {
-  margin-bottom: 2.5rem ;
+  margin-bottom: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--white);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   box-shadow: var(--box-shadow);
   padding: 1.5rem;
   border: var(--border);
@@ -456,7 +457,7 @@ section {
   font-size: 2rem;
   background: none;
 }
-.show-posts .search-form button:hover{
+.show-posts .search-form button:hover {
   color: var(--main-color);
 }
 
@@ -466,24 +467,169 @@ section {
   gap: 1.5rem;
   justify-content: center;
   align-items: flex-start;
-
 }
 .accounts .box-container .box {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
   border: var(--box-shadow);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1.5rem;
 }
 .accounts .box-container .box p {
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   font-size: 1.8rem;
   color: var(--light-color);
 }
 .accounts .box-container .box p span {
   color: var(--main-color);
 }
+.read-post form {
+  border-radius: 0.5rem;
+  border: var(--border);
+  padding: 2rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
 
+.read-post form .status {
+  border-radius: 0.5rem;
+  padding: 1rem 2.5rem;
+  font-size: 2rem;
+  color: var(--white);
+  display: inline-block;
+}
+
+.read-post form .image {
+  width: 100%;
+  border-radius: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.read-post form .title {
+  color: var(--black);
+  font-size: 2rem;
+  margin-top: 1.5rem;
+}
+
+.read-post form .content {
+  line-height: 1.5;
+  font-size: 1.8rem;
+  color: var(--light-color);
+  padding: 1rem 0;
+  white-space: pre-line;
+}
+
+.read-post form .icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.5rem;
+  border: var(--border);
+  background-color: var(--light-bg);
+  padding: 1.5rem 2rem;
+  margin: 1rem 0;
+}
+
+.read-post form .icons div {
+  font-size: 1.8rem;
+}
+
+.read-post form .icons span {
+  color: var(--main-color);
+}
+
+.read-post form .icons i {
+  color: var(--light-color);
+  margin-right: 0.5rem;
+}
+
+.comments .comment-title {
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  background-color: var(--black);
+  padding: 2rem;
+  color: var(--white);
+  font-size: 2rem;
+}
+
+.comments .box-container {
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.comments .box-container .box {
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  border: var(--border);
+}
+
+.comments .box-container .post-title {
+  font-size: 2rem;
+  color: var(--light-color);
+}
+
+.comments .box-container .post-title span {
+  color: var(--black);
+}
+
+.comments .box-container .post-title a {
+  color: var(--main-color);
+  margin-left: 0.5rem;
+}
+
+.comments .box-container .post-title a:hover {
+  color: var(--black);
+  text-decoration: underline;
+}
+
+.comments .box-container .box .user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.comments .box-container .box .user i {
+  font-size: 2rem;
+  border-radius: 0.5rem;
+  border: var(--border);
+  height: 4.5rem;
+  width: 5rem;
+  line-height: 4.1rem;
+  background-color: var(--white);
+  text-align: center;
+  color: var(--light-color);
+}
+
+.comments .box-container .box .user .user-info span {
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.comments .box-container .box .user .user-info div {
+  color: var(--light-color);
+  font-size: 1.6rem;
+  margin-top: 0.2rem;
+}
+
+.comments .box-container .box .text {
+  font-size: 1.8rem;
+  color: var(--black);
+  line-height: 1.5;
+  white-space: pre-line;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  margin: 0.5rem 0;
+  border: var(--border);
+}
 
 /* media queries starts  */
 @media (max-width: 991px) {
@@ -506,8 +652,6 @@ section {
   }
 }
 
-
-
 @media (max-width: 768px) {
   #menu-btn {
     display: inline-block;
@@ -525,7 +669,7 @@ section {
     flex-flow: column;
     gap: 0;
   }
-  .accounts .box-container{
+  .accounts .box-container {
     grid-template-columns: 1fr;
   }
 }
