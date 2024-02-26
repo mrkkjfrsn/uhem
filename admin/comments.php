@@ -4,7 +4,7 @@ session_start();
 
 $admin_id = $_SESSION['admin_id'];
 
-if(!isset($admin_id)){
+if (!isset($admin_id)) {
     header("Location: admin_login.php");
 }
 
@@ -16,7 +16,7 @@ if(!isset($admin_id)){
 
 <head>
     <meta charset="UTF-8">
-    
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>user comments</title>
 
@@ -36,6 +36,52 @@ if(!isset($admin_id)){
 
     <!-- header section ends  -->
 
+    <section class="comments" style="padding-top: 0;">
+   
+   <p class="comment-title">post comments</p>
+   <div class="box-container">
+   <?php
+         $select_comments = $conn->prepare("SELECT * FROM `comments` WHERE admin_id = ?");
+         $select_comments->execute([$admin_id]);
+         if($select_comments->rowCount() > 0){
+            while($fetch_comments = $select_comments->fetch(PDO::FETCH_ASSOC)){
+      ?>
+   <div class="box">
+  <?php
+  $select_posts = $conn->prepare("SELECT * from `posts` where id = ?");
+  $select_posts->execute([$fetch_comments['post_id']]);
+  while($fetch_post = $select_posts->fetch(PDO::FETCH_ASSOC)){
+
+  
+  
+  
+  ?>
+  <div class="post-title"><span>from:</span><p><?= $fetch_post['title']; ?></p><a href="read_posts.php?post_id=<?= $fetch_post['id']; ?>">read post</a></div>
+  <?php
+  }
+  ?>
+      <div class="user">
+         <i class="fas fa-user"></i>
+         <div class="user-info">
+            <span><?= $fetch_comments['user_name']; ?></span>
+            <div><?= $fetch_comments['date']; ?></div>
+         </div>
+      </div>
+      <div class="text"><?= $fetch_comments['comment']; ?></div>
+      <form action="" method="POST">
+         <input type="hidden" name="comment_id" value="<?= $fetch_comments['id']; ?>">
+         <button type="submit" class="inline-delete-btn" name="delete_comment" onclick="return confirm('delete this comment?');">delete comment</button>
+      </form>
+   </div>
+   <?php
+         }
+      }else{
+         echo '<p class="empty">no comments added yet!</p>';
+      }
+   ?>
+   </div>
+
+</section>
 
 
 
