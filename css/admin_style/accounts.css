@@ -1,3 +1,15 @@
+:root {
+  --main-color: #4834d4;
+  --red: #e74c3c;
+  --orange: #f39c12;
+  --black: #34495e;
+  --white: #fff;
+  --light-bg: #f5f5f5;
+  --light-color: #999;
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
 .accounts .box-container{
     display: grid;
     grid-template-columns: repeat(auto-fit, 33rem);
