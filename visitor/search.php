@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -10,7 +10,7 @@ if (isset($_SESSION['user_id'])) {
     $user_id = '';
 };
 
-include 'components/like_post.php';
+include '../components/like_post.php';
 
 ?>
 
@@ -34,7 +34,7 @@ include 'components/like_post.php';
 
 <body>
 
-    <?php include 'components/user_header.php'; ?>
+    <?php include '../components/user_header.php'; ?>
 
     <?php
     if (isset($_POST['search_box']) or isset($_POST['search_btn'])) {
@@ -109,7 +109,7 @@ include 'components/like_post.php';
     }
     ?>
 
-    <?php include 'components/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
 
  
 

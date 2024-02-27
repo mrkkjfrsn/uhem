@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -16,7 +16,7 @@ if (isset($_GET['author'])) {
     $author = '';
 }
 
-include 'components/like_post.php';
+include '../components/like_post.php';
 
 ?>
 
@@ -40,7 +40,7 @@ include 'components/like_post.php';
 <body>
 
     <!-- header section starts  -->
-    <?php include 'components/user_header.php'; ?>
+    <?php include '../components/user_header.php'; ?>
     <!-- header section ends -->
 
 
@@ -116,7 +116,7 @@ include 'components/like_post.php';
 
 
 
-    <?php include 'components/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
 
 
 

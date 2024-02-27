@@ -1,6 +1,7 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
+
 
 session_start();
 
@@ -10,7 +11,8 @@ if (isset($_SESSION['user_id'])) {
     $user_id = '';
 };
 
-include 'components/like_post.php';
+include '../components/like_post.php';
+
 
 ?>
 
@@ -28,14 +30,14 @@ include 'components/like_post.php';
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custome css  -->
-    <link rel="stylesheet" href="css/visitor.css">
+    
 
 </head>
 
 <body>
 
     <!-- header section starts  -->
-    <?php include 'components/user_header.php'; ?>
+    <?php include '../components/user_header.php'; ?>
     <!-- header section ends -->
 
 
@@ -79,7 +81,7 @@ include 'components/like_post.php';
 
 
 
-    <?php include 'components/footer.php'; ?>
+    <?php include '../components/footer.php'; ?>
 
 
 

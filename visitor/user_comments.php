@@ -1,6 +1,6 @@
 <?php
 
-include 'components/connect.php';
+include '../components/connect.php';
 
 session_start();
 
@@ -60,7 +60,7 @@ if (isset($_POST['delete_comment'])) {
 <body>
 
    <!-- header section starts  -->
-   <?php include 'components/user_header.php'; ?>
+   <?php include '../components/user_header.php'; ?>
    <!-- header section ends -->
 
    <?php
@@ -134,7 +134,7 @@ if (isset($_POST['delete_comment'])) {
 
 
 
-   <?php include 'components/footer.php'; ?>
+   <?php include '../components/footer.php'; ?>
 
 
 

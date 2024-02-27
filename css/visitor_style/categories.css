@@ -1,0 +1,39 @@
+
+ 
+ .categories .box-container{
+    border:var(--border);
+    border-radius: .5rem;
+    background-color: var(--light-bg);
+    padding:1rem 2rem;
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+ }
+ 
+ .categories .box-container .box{
+    padding:1rem 0;
+    font-size: 2rem;
+ }
+ 
+ .categories .box-container .box span{
+    color:var(--light-color);
+    display: inline-block;
+    padding:.7rem 1rem;
+    border:var(--border);
+    background-color: var(--light-bg);
+    border-radius: .5rem;
+    text-align: center;
+ }
+ 
+ .categories .box-container .box a{
+    margin-left: 1.2rem;
+    color:var(--black);
+ }
+ 
+ .categories .box-container .box a:hover{
+    color:var(--main-color);
+    text-decoration: underline;
+ }
+ 
+ 
+ 
+ 
