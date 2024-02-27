@@ -153,7 +153,7 @@ include 'components/like_post.php';
                         <?php
                         if ($fetch_posts['image'] != '') {
                         ?>
-                            <img src="uploaded_img/<?= $fetch_posts['image']; ?>" class="post-image" alt="">
+                            <img src="uploaded_images/<?= $fetch_posts['image']; ?>" class="post-image" alt="">
                         <?php
                         }
                         ?>
@@ -185,7 +185,7 @@ include 'components/like_post.php';
 
     <?php include 'components/footer.php'; ?>
 
-    <script src="/js/user.js"></script>
+    <script src="js/user.js"></script>
 
 </body>
 
