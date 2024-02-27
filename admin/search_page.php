@@ -7,14 +7,14 @@ $admin_id = $_SESSION['admin_id'];
 if (!isset($admin_id)) {
     header("Location: admin_login.php");
 }
-if(isset($_POST['delete'])){
+if (isset($_POST['delete'])) {
     $delete_id = $_POST['post_id'];
     $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
     $select_image = $conn->prepare("SELECT * from `posts` where id = ?");
     $select_image->execute([$delete_id]);
     $fetch_image = $select_image->fetch(PDO::FETCH_ASSOC);
-    if($fetch_image['image'] != ''){
-        unlink('../uploaded_images/'.$fetch_image['image']);
+    if ($fetch_image['image'] != '') {
+        unlink('../uploaded_images/' . $fetch_image['image']);
     }
     $delete_comments = $conn->prepare("DELETE from `comments` where post_id = ?");
     $delete_comments->execute([$delete_id]);
@@ -68,52 +68,52 @@ if(isset($_POST['delete'])){
         <div class="box-container">
 
             <?php
-            if(isset($_POST['search_box']) || isset($_POST['search_btn'])){
-            $search_box = $_POST['search_box'];
-      
-            $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE admin_id = ? and title Like '%{$search_box}%'");
-            $select_posts->execute([$admin_id]);
-            if ($select_posts->rowCount() > 0) {
-                while ($fetch_posts = $select_posts->fetch(PDO::FETCH_ASSOC)) {
-                    $post_id = $fetch_posts['id'];
+            if (isset($_POST['search_box']) || isset($_POST['search_btn'])) {
+                $search_box = $_POST['search_box'];
 
-                    $count_post_comments = $conn->prepare("SELECT * FROM `comments` WHERE post_id = ?");
-                    $count_post_comments->execute([$post_id]);
-                    $total_post_comments = $count_post_comments->rowCount();
+                $select_posts = $conn->prepare("SELECT * FROM `posts` WHERE admin_id = ? and title Like '%{$search_box}%'");
+                $select_posts->execute([$admin_id]);
+                if ($select_posts->rowCount() > 0) {
+                    while ($fetch_posts = $select_posts->fetch(PDO::FETCH_ASSOC)) {
+                        $post_id = $fetch_posts['id'];
 
-                    $count_post_likes = $conn->prepare("SELECT * FROM `likes` WHERE post_id = ?");
-                    $count_post_likes->execute([$post_id]);
-                    $total_post_likes = $count_post_likes->rowCount();
+                        $count_post_comments = $conn->prepare("SELECT * FROM `comments` WHERE post_id = ?");
+                        $count_post_comments->execute([$post_id]);
+                        $total_post_comments = $count_post_comments->rowCount();
+
+                        $count_post_likes = $conn->prepare("SELECT * FROM `likes` WHERE post_id = ?");
+                        $count_post_likes->execute([$post_id]);
+                        $total_post_likes = $count_post_likes->rowCount();
 
             ?>
-                    <form method="post" class="box">
-                        <input type="hidden" name="post_id" value="<?= $post_id; ?>">
-                        <?php if ($fetch_posts['image'] != '') { ?>
-                            <img src="../uploaded_images/<?= $fetch_posts['image']; ?>" class="image" alt="">
-                        <?php } ?>
-                        <div class="status" style="background-color:<?php if ($fetch_posts['status'] == 'active') {
-                                                                        echo 'limegreen';
-                                                                    } else {
-                                                                        echo 'coral';
-                                                                    }; ?>;"><?= $fetch_posts['status']; ?></div>
-                        <div class="title"><?= $fetch_posts['title']; ?></div>
-                        <div class="posts-content"><?= $fetch_posts['content']; ?></div>
-                        <div class="icons">
-                            <div class="likes"><i class="fas fa-heart"></i><span><?= $total_post_likes; ?></span></div>
-                            <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
-                        </div>
-                        <div class="flex-btn">
-                            <a href="edit_post.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
-                            <button type="submit" name="delete" class="delete-btn" onclick="return confirm('delete this post?');">delete</button>
-                        </div>
-                        <a href="read_post.php?post_id=<?= $post_id; ?>" class="btn">view post</a>
-                    </form>
+                        <form method="post" class="box">
+                            <input type="hidden" name="post_id" value="<?= $post_id; ?>">
+                            <?php if ($fetch_posts['image'] != '') { ?>
+                                <img src="../uploaded_images/<?= $fetch_posts['image']; ?>" class="image" alt="">
+                            <?php } ?>
+                            <div class="status" style="background-color:<?php if ($fetch_posts['status'] == 'active') {
+                                                                            echo 'limegreen';
+                                                                        } else {
+                                                                            echo 'coral';
+                                                                        }; ?>;"><?= $fetch_posts['status']; ?></div>
+                            <div class="title"><?= $fetch_posts['title']; ?></div>
+                            <div class="posts-content"><?= $fetch_posts['content']; ?></div>
+                            <div class="icons">
+                                <div class="likes"><i class="fas fa-heart"></i><span><?= $total_post_likes; ?></span></div>
+                                <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
+                            </div>
+                            <div class="flex-btn">
+                                <a href="edit_post.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
+                                <button type="submit" name="delete" class="delete-btn" onclick="return confirm('delete this post?');">delete</button>
+                            </div>
+                            <a href="read_post.php?post_id=<?= $post_id; ?>" class="btn">view post</a>
+                        </form>
             <?php
+                    }
+                } else {
+                    echo '<p class="empty">no posts found<a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
                 }
-            } else {
-                echo '<p class="empty">no posts found<a href="add_posts.php" class="btn" style="margin-top:1.5rem;">add post</a></p>';
             }
-        }
             ?>
 
         </div>
