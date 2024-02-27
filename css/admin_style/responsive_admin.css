@@ -1,0 +1,56 @@
+
+
+
+/* media queries  */
+
+@media (max-width:1200px){
+
+    html{
+       font-size: 55%;
+    }
+  
+    body{
+       padding-left: 0;
+    }
+  
+    #menu-btn{
+       display: block;
+    }
+  
+    .header{
+       left: -35rem;
+       transition: .2s linear;
+    }
+  
+    .header.active{
+       left: 0rem;
+       box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+       border-right: none;
+    }
+  
+  }
+  
+  @media (max-width:450px){
+  
+    html{
+       font-size: 50%;
+    }
+  
+    .flex-btn{
+       flex-flow: column;
+       gap:0;
+    }
+  
+    .heading{
+       font-size: 3rem;
+    }
+  
+    .show-posts .box-container{
+       grid-template-columns: 1fr;
+    }
+  
+    .accounts .box-container{
+       grid-template-columns: 1fr;
+    }
+  
+  }
