@@ -152,8 +152,8 @@ if (isset($_POST['delete_comment'])) {
 
 
 
-   <!-- custom js file link  -->
-   <script src="../js/admin_script.js"></script>
+<!-- custom js file link  -->
+<script src="../js/admin.js"></script>
 
 </body>
 

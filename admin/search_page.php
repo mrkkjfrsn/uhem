@@ -123,8 +123,9 @@ if (isset($_POST['delete'])) {
 
 
 
-    <!-- custom js -->
-    <script src="../js/admin.js"></script>
+    
+<!-- custom js file link  -->
+<script src="../js/admin.js"></script>
 
 </body>
 

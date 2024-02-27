@@ -29,11 +29,11 @@ include 'components/like_post.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>author</title>
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- custome css  -->
+    <link rel="stylesheet" href="css/visitor.css">
 
 </head>
 
@@ -124,9 +124,9 @@ include 'components/like_post.php';
 
 
 
-    <!-- custom js file link  -->
-    <script src="js/script.js"></script>
 
+    <!-- custom js file link  -->
+    <script src="js/visitor.js"></script>
 </body>
 
 </html>

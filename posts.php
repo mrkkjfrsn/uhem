@@ -23,10 +23,12 @@ include 'components/like_post.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>posts</title>
 
-    <!-- font awesome cdn link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- custome css  -->
+    <link rel="stylesheet" href="css/visitor.css">
 
 </head>
 
@@ -119,7 +121,9 @@ include 'components/like_post.php';
 
     <?php include 'components/footer.php'; ?>
 
-    <script src="js/script.js"></script>
+
+    <!-- custom js file link  -->
+    <script src="js/visitor.js"></script>
 
 </body>
 

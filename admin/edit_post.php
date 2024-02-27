@@ -198,8 +198,7 @@ if (isset($_POST['delete_image'])) {
 
 
    <!-- custom js file link  -->
-   <script src="../js/admin_script.js"></script>
-
+   <script src="../js/admin.js"></script>
 </body>
 
 </html>

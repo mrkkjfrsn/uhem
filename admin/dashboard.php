@@ -141,8 +141,8 @@ if (!isset($admin_id)) {
 
 
 
-   <!-- custom js file link  -->
-   <script src="../js/admin_script.js"></script>
+<!-- custom js file link  -->
+<script src="../js/admin.js"></script>
 
 </body>
 

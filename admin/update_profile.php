@@ -103,8 +103,8 @@ if (isset($_POST['submit'])) {
 
 
 
-   <!-- custom js file link  -->
-   <script src="../js/admin_script.js"></script>
+<!-- custom js file link  -->
+<script src="../js/admin.js"></script>
 
 </body>
 

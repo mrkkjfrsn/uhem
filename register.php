@@ -55,11 +55,12 @@ if (isset($_POST['submit'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>register</title>
 
+
     <!-- font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custome css  -->
-    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/visitor.css">
 
 </head>
 
@@ -101,8 +102,9 @@ if (isset($_POST['submit'])) {
 
 
 
+
     <!-- custom js file link  -->
-    <script src="js/user.js"></script>
+    <script src="js/visitor.js"></script>
 
 </body>
 
