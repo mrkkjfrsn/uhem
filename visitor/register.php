@@ -60,7 +60,17 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- custome css  -->
-    <link rel="stylesheet" href="css/visitor.css">
+    <link rel="stylesheet" href="../css/visitor_style/authors.css">
+    <link rel="stylesheet" href="../css/visitor_style/buttons.css">
+    <link rel="stylesheet" href="../css/visitor_style/categories.css">
+    <link rel="stylesheet" href="../css/visitor_style/comments.css">
+    <link rel="stylesheet" href="../css/visitor_style/footer.css">
+    <link rel="stylesheet" href="../css/visitor_style/general_visitor.css">
+    <link rel="stylesheet" href="../css/visitor_style/home.css">
+    <link rel="stylesheet" href="../css/visitor_style/messages.css">
+    <link rel="stylesheet" href="../css/visitor_style/post.css">
+    <link rel="stylesheet" href="../css/visitor_style/responsive_visitor.css">
+    <link rel="stylesheet" href="../css/visitor_style/visitor_header.css">
 
 </head>
 
@@ -103,9 +113,9 @@ if (isset($_POST['submit'])) {
 
 
 
-    <!-- custom js file link  -->
-    <script src="js/visitor.js"></script>
 
+    <!-- custom js file link  -->
+    <script src="../js/visitor.js"></script>
 </body>
 
 </html>

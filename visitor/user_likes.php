@@ -27,8 +27,18 @@ include '../components/like_post.php';
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/style.css">
+    <!-- custome css  -->
+    <link rel="stylesheet" href="../css/visitor_style/authors.css">
+    <link rel="stylesheet" href="../css/visitor_style/buttons.css">
+    <link rel="stylesheet" href="../css/visitor_style/categories.css">
+    <link rel="stylesheet" href="../css/visitor_style/comments.css">
+    <link rel="stylesheet" href="../css/visitor_style/footer.css">
+    <link rel="stylesheet" href="../css/visitor_style/general_visitor.css">
+    <link rel="stylesheet" href="../css/visitor_style/home.css">
+    <link rel="stylesheet" href="../css/visitor_style/messages.css">
+    <link rel="stylesheet" href="../css/visitor_style/post.css">
+    <link rel="stylesheet" href="../css/visitor_style/responsive_visitor.css">
+    <link rel="stylesheet" href="../css/visitor_style/visitor_header.css">
 
 </head>
 
@@ -122,8 +132,10 @@ include '../components/like_post.php';
 
     <?php include '../components/footer.php'; ?>
 
+
+
     <!-- custom js file link  -->
-    <script src="js/script.js"></script>
+    <script src="../js/visitor.js"></script>
 
 </body>
 
