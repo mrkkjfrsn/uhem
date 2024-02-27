@@ -11,24 +11,21 @@ if(!isset($admin_id)){
 }
 
 if(isset($_POST['delete'])){
-   $delete_id = $_POST['post_id'];
-   $delete_id = filter_var($delete_id, FILTER_SANITIZE_STRING);
-   $select_image = $conn->prepare("SELECT * from `posts` where id = ?");
-   $select_image->execute([$delete_id]);
-   $fetch_image = $select_image->fetch(PDO::FETCH_ASSOC);
-   if($fetch_image['image'] != ''){
-       unlink('../uploaded_images/'.$fetch_image['image']);
+
+   $p_id = $_POST['post_id'];
+   $p_id = filter_var($p_id, FILTER_SANITIZE_STRING);
+   $delete_image = $conn->prepare("SELECT * FROM `posts` WHERE id = ?");
+   $delete_image->execute([$p_id]);
+   $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
+   if($fetch_delete_image['image'] != ''){
+      unlink('../uploaded_img/'.$fetch_delete_image['image']);
    }
-   $delete_comments = $conn->prepare("DELETE from `comments` where post_id = ?");
-   $delete_comments->execute([$delete_id]);
+   $delete_post = $conn->prepare("DELETE FROM `posts` WHERE id = ?");
+   $delete_post->execute([$p_id]);
+   $delete_comments = $conn->prepare("DELETE FROM `comments` WHERE post_id = ?");
+   $delete_comments->execute([$p_id]);
+   $message[] = 'post deleted successfully!';
 
-   $delete_likes = $conn->prepare("DELETE from `likes` where post_id = ?");
-   $delete_likes->execute([$delete_id]);
-
-   $delete_post = $conn->prepare("DELETE from `posts` where id = ?");
-   $delete_post->execute([$delete_id]);
-
-   $message[] = 'post deleted successfully';
 }
 
 ?>
@@ -41,26 +38,20 @@ if(isset($_POST['delete'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>posts</title>
 
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- custome css  -->
-    <link rel="stylesheet" href="../css/admin.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
 <body>
-   
 
 <?php include '../components/admin_header.php' ?>
 
 <section class="show-posts">
 
    <h1 class="heading">your posts</h1>
-   
-   <form action="search_page.php" method="post" class="search-form">
-   <input type="text" placeholder="search posts...." required maxlength="100" name="search_box">
-   <button class="fas fa-search" name="search_btn"></button>
-   </form>
 
    <div class="box-container">
 
@@ -83,7 +74,7 @@ if(isset($_POST['delete'])){
       <form method="post" class="box">
          <input type="hidden" name="post_id" value="<?= $post_id; ?>">
          <?php if($fetch_posts['image'] != ''){ ?>
-            <img src="../uploaded_images/<?= $fetch_posts['image']; ?>" class="image" alt="">
+            <img src="../uploaded_img/<?= $fetch_posts['image']; ?>" class="image" alt="">
          <?php } ?>
          <div class="status" style="background-color:<?php if($fetch_posts['status'] == 'active'){echo 'limegreen'; }else{echo 'coral';}; ?>;"><?= $fetch_posts['status']; ?></div>
             <div class="title"><?= $fetch_posts['title']; ?></div>
@@ -93,7 +84,7 @@ if(isset($_POST['delete'])){
             <div class="comments"><i class="fas fa-comment"></i><span><?= $total_post_comments; ?></span></div>
          </div>
          <div class="flex-btn">
-            <a href="edit_posts.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
+            <a href="edit_post.php?id=<?= $post_id; ?>" class="option-btn">edit</a>
             <button type="submit" name="delete" class="delete-btn" onclick="return confirm('delete this post?');">delete</button>
          </div>
          <a href="read_post.php?post_id=<?= $post_id; ?>" class="btn">view post</a>

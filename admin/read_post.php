@@ -20,7 +20,7 @@ if(isset($_POST['delete'])){
    $delete_image->execute([$p_id]);
    $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
    if($fetch_delete_image['image'] != ''){
-      unlink('../uploaded_images/'.$fetch_delete_image['image']);
+      unlink('../uploaded_img/'.$fetch_delete_image['image']);
    }
    $delete_post = $conn->prepare("DELETE FROM `posts` WHERE id = ?");
    $delete_post->execute([$p_id]);
@@ -50,11 +50,11 @@ if(isset($_POST['delete_comment'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>posts</title>
 
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- custome css  -->
-    <link rel="stylesheet" href="../css/admin.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
 <body>

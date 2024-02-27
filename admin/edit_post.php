@@ -47,7 +47,7 @@ if(isset($_POST['save'])){
          move_uploaded_file($image_tmp_name, $image_folder);
          $update_image->execute([$image, $post_id]);
          if($old_image != $image AND $old_image != ''){
-            unlink('../uploaded_images/'.$old_image);
+            unlink('../uploaded_img/'.$old_image);
          } 
          $message[] = 'image updated!';
       }
@@ -64,7 +64,7 @@ if(isset($_POST['delete_post'])){
    $delete_image->execute([$post_id]);
    $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
    if($fetch_delete_image['image'] != ''){
-      unlink('../uploaded_images/'.$fetch_delete_image['image']);
+      unlink('../uploaded_img/'.$fetch_delete_image['image']);
    }
    $delete_post = $conn->prepare("DELETE FROM `posts` WHERE id = ?");
    $delete_post->execute([$post_id]);
@@ -83,7 +83,7 @@ if(isset($_POST['delete_image'])){
    $delete_image->execute([$post_id]);
    $fetch_delete_image = $delete_image->fetch(PDO::FETCH_ASSOC);
    if($fetch_delete_image['image'] != ''){
-      unlink('../uploaded_images/'.$fetch_delete_image['image']);
+      unlink('../uploaded_img/'.$fetch_delete_image['image']);
    }
    $unset_image = $conn->prepare("UPDATE `posts` SET image = ? WHERE id = ?");
    $unset_image->execute([$empty_image, $post_id]);
@@ -102,11 +102,11 @@ if(isset($_POST['delete_image'])){
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>posts</title>
 
-    <!-- font awesome  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 
-    <!-- custome css  -->
-    <link rel="stylesheet" href="../css/admin.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="../css/admin_style.css">
 
 </head>
 <body>
