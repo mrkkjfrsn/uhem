@@ -105,9 +105,14 @@
   padding: 1rem 0;
 }
 
-.show-posts .box-container .box .posts-content::after {
-  content: "...";
+.show-posts .box-container .box .posts-content:not(:empty):not(:after) {
+  display: inline; 
 }
+
+.show-posts .box-container .box .posts-content:not(:empty):not(:after)::after {
+  content: "..."; 
+}
+
 
 .show-posts .box-container .box .icons {
   display: flex;

@@ -21,7 +21,7 @@ if (isset($message)) {
         ?>
 
         <p><?= $fetch_profile['name']; ?></p>;
-        <a href="update_profile.php" class="btn">update profile</a>
+        <a href="update_profile.php" class="btn-side">update profile</a>
 
     </div>
     <nav class="navbar">
@@ -29,13 +29,13 @@ if (isset($message)) {
         <a href="add_posts.php"><i class="fa-solid fa-pen"></i><span>add post</span></a>
         <a href="view_posts.php"><i class="fa-solid fa-eye"></i><span>view post</span></a>
         <a href="admin_accounts.php"><i class="fa-solid fa-user"></i><span>accounts</span></a>
-        <a href="../admin/admin_login.php" onclick="return confirm('logout from the website?');"><i class="fa-solid fa-right-from-bracket"></i><span style="color: #d32f2f;">logout</span></a>
+        <a href="../admin/admin_login.php" onclick="return confirm('logout from the website?');"><i class="fa-solid fa-right-from-bracket"></i><span id="logout">logout</span></a>
 
     </nav>
 
     <div class="flex-btn">
-        <a href="admin_login.php" class="option-btn">login</a>
-        <a href="register_admin.php" class="option-btn">register</a>
+        <a href="admin_login.php" class="btn-side">login</a>
+        <a href="register_admin.php" class="btn-side">register</a>
     </div>
 
 </header>

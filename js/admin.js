@@ -9,7 +9,10 @@ window.onscroll = () => {
 
 }
 
-
 document.querySelectorAll('.posts-content').forEach(content => {
-    if(content.innerHTML.length > 100) content.innerHTML = content.innerHTML.slice(0, 100);
- });
+    let words = content.innerText.match(/\S+/g); 
+    if (words && words.length > 5) {
+        let truncatedContent = words.slice(0, 5).join(' '); 
+        content.innerText = truncatedContent + '...';
+    }
+});

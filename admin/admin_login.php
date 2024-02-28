@@ -73,7 +73,7 @@ if (isset($_POST['submit'])) {
          <h3>login now</h3>
          <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
          <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
-         <input type="submit" value="login now" name="submit" class="btn">
+         <input type="submit" value="login" name="submit" class="btn">
       </form>
 
    </section>
