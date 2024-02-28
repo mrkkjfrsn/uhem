@@ -77,7 +77,7 @@
   margin-bottom: 1rem;
 }
 
-.posts-container .box-container .box .post-content {
+/* .posts-container .box-container .box .post-content {
   font-size: 2rem;
   line-height: 1.5;
   padding: 0.5rem 0;
@@ -87,7 +87,16 @@
 
 .posts-container .box-container .box .post-content::after {
   content: "...";
-}
+} */
+
+.posts-container .box-container .box .post-content {
+   font-size: 2rem;
+   line-height: 1.5;
+   padding: 0.5rem 0;
+   color: var(--light-color);
+   white-space: pre-line;
+ }
+
 
 .posts-container .box-container .box .post-cat {
   display: block;

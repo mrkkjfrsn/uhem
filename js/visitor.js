@@ -28,6 +28,17 @@ window.onscroll = () =>{
    searchForm.classList.remove('active');
 }
 
+document.querySelectorAll('.post-content').forEach(content => {
+   let words = content.innerText.trim().split(/\s+/); // Split content into words
+   if (words.length > 5) { // Check if there are more than 5 words
+       let truncatedContent = words.slice(0, 5).join(' '); // Truncate content to first 5 words
+       content.innerText = truncatedContent + '...'; // Add ellipsis
+   }
+});
+
 document.querySelectorAll('.content-150').forEach(content => {
    if(content.innerHTML.length > 150) content.innerHTML = content.innerHTML.slice(0, 150);
 });
+
+
+

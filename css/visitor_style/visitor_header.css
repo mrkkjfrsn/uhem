@@ -3,13 +3,14 @@
   --red: #d32f2f;
   --orange: #f39c12;
   --yellow: #e4910b;
+  --light-yellow: #f5aa30;
   --black: #34495e;
   --white: #fff;
   --light-bg: #f5f5f5;
   --light-color: #999;
   --brdr: 0.2rem solid var(--yellow);
-  --brder: 0.2rem solid var(--main-clr);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --b-shadow:  0 0 0 0.4rem rgba(234, 243, 71, 0.25);
 }
 
 .empty {
@@ -36,7 +37,7 @@
 .header {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
-  border-bottom: var(--border);
+  border-bottom: var(--brdr);
   position: sticky;
   top: 0;
   left: 0;
@@ -59,14 +60,17 @@
 }
 
 .header .flex .search-form {
-  border: var(--border);
+  border: var(--brdr);
   border-radius: 0.5rem;
   background-color: var(--light-bg);
   display: flex;
   gap: 2rem;
   padding: 1.5rem 2rem;
   width: 50rem;
+  caret-color: var(--red);
+  outline: none;
 }
+
 
 .header .flex .search-form .box {
   width: 100%;
@@ -74,11 +78,17 @@
   font-size: 1.7rem;
   color: var(--black);
 }
+/* .header .flex .search-form .box:focus{
+   outline-style: solid;
+   outline: var(--yellow);
+   border: var(--b-shadow);
+  
+  } */
 
 .header .flex .search-form .fa-search {
   font-size: 2rem;
   cursor: pointer;
-  color: var(--black);
+ color: var(--yellow);
   background: none;
 }
 
@@ -106,7 +116,7 @@
   position: absolute;
   top: 125%;
   right: 2rem;
-  border: var(--border);
+  border: var(--brdr);
   background-color: var(--white);
   border-radius: 0.5rem;
   width: 30rem;
@@ -150,7 +160,7 @@
   position: absolute;
   top: 125%;
   right: 2rem;
-  border: var(--border);
+  border: var(--brdr);
   background-color: var(--white);
   border-radius: 0.5rem;
   width: 30rem;
@@ -165,7 +175,7 @@
 .header .flex .profile p {
   padding-bottom: 0.7rem;
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--black);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

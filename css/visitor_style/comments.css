@@ -8,6 +8,7 @@
   --light-bg: #f5f5f5;
   --light-color: #999;
   --brdr: 0.2rem solid var(--yellow);
+  --brder: 0.2rem solid var(--main-clr);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
@@ -112,10 +113,10 @@
   width: 5rem;
   line-height: 4.7rem;
   font-size: 2rem;
-  border: var(--border);
+  border: var(--brder);
   border-radius: 0.5rem;
   background-color: var(--light-bg);
-  color: var(--black);
+ color: var(--main-clr);
 }
 
 .comments-container .user-comments-container .show-comments .comment-user span {
@@ -144,7 +145,7 @@
   width: 100%;
   white-space: pre-line;
   line-height: 1.5;
-  border: var(--border);
+ border: var(--brdr);
 }
 
 .comments-container .user-comments-container .show-comments textarea {

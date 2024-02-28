@@ -164,7 +164,7 @@ include '../components/like_post.php';
                         <?php
                         if ($fetch_posts['image'] != '') {
                         ?>
-                            <img src="uploaded_images/<?= $fetch_posts['image']; ?>" class="post-image" alt="">
+                            <img src="../uploaded_img/<?= $fetch_posts['image']; ?>" class="post-image" alt="">
                         <?php
                         }
                         ?>

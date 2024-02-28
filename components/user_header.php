@@ -20,7 +20,7 @@ if (isset($message)) {
 
 
         <form action="search.php" method="POST" class="search-form">
-            <input type="text" name="search_box" class="box" maxlength="100" placeholder="search for blogs" required>
+            <input type="text" name="search_box" class="box" maxlength="100" placeholder="search for blogs">
             <button type="submit" class="fas fa-search" name="search_btn"></button>
         </form>
 
