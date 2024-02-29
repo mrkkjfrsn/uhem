@@ -5,34 +5,34 @@
   --white: #fff;
   --light-bg: #f5f5f5;
   --light-color: #999;
-  --border: 0.2rem solid var(--black);
+  --brdr: 0.2rem solid var(--yellow);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 
-.accounts .box-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 33rem);
-    gap:1.5rem;
-    justify-content: center;
-    align-items: flex-start;
-  }
-  
-  .accounts .box-container .box{
-    background-color: var(--white);
-    border-radius: .5rem;
-    box-shadow: var(--box-shadow);
-    border:var(--border);
-    padding:1rem 2rem;
-    text-align: center;
-  }
-  
-  .accounts .box-container .box p{
-    margin: .5rem 0;
-    font-size: 1.8rem;
-    color:var(--black);
-    line-height: 1.5;
-  }
-  
-  .accounts .box-container .box p span{
-    color:var(--main-color);
-  }
+.accounts .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.accounts .box-container .box {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: var(--box-shadow);
+  border: var(--brdr);
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.accounts .box-container .box p {
+  margin: 0.5rem 0;
+  font-size: 1.8rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+
+.accounts .box-container .box p span {
+  color: var(--main-color);
+}

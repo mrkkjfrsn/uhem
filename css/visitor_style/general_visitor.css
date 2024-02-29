@@ -97,12 +97,12 @@ section {
 }
 
 .form-container form p a {
-  color: var(--orange);
+  color: var(--main-clr);
 }
 
 .form-container form p a:hover {
   text-decoration: underline;
-  color: var(--red);
+  color: orange;
 }
 
 .form-container form .box {
@@ -115,7 +115,10 @@ section {
   border: var(--brdr);
   font-size: 1.8rem;
   border-radius: 0.5rem;
+  outline: none;
 }
 .form-container form .box:focus {
   box-shadow: var(--b-shadow);
+  border: var(--brdr);
+  outline: var(--yellow);
 }
