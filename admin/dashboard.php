@@ -63,7 +63,7 @@ if (!isset($admin_id)) {
             ?>
             <h3><?= $numbers_of_posts; ?></h3>
             <p>posts added</p>
-            <a href="add_posts.php" class="btn">add new post</a>
+            <a href="add_posts.php" class="btn">add new post</a>  
          </div>
 
          <div class="box">

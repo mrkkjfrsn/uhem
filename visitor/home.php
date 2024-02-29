@@ -23,7 +23,7 @@ include '../components/like_post.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>home page</title>
 
-  
+
     <!-- font awesome  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -194,10 +194,13 @@ include '../components/like_post.php';
 
     </section>
 
-    <?php include '../components/footer.php'; ?>
+    <footer class="footer">
+        &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
+    </footer>
 
 
- 
+
+
 
     <!-- custom js file link  -->
     <script src="../js/visitor.js"></script>

@@ -1,39 +1,48 @@
+:root {
+  --main-clr: #af2532;
+  --red: #d32f2f;
+  --orange: #f39c12;
+  --yellow: #e4910b;
+  --black: #34495e;
+  --blacker: #191b1d;
+  --white: #fff;
+  --light-bg: #f5f5f5;
+  --light-color: #999;
+  --brdr: 0.2rem solid var(--yellow);
+  --brder: 0.2rem solid var(--main-clr);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
 
- 
- .categories .box-container{
-    border:var(--border);
-    border-radius: .5rem;
-    background-color: var(--light-bg);
-    padding:1rem 2rem;
-    background-color: var(--white);
-    box-shadow: var(--box-shadow);
- }
- 
- .categories .box-container .box{
-    padding:1rem 0;
-    font-size: 2rem;
- }
- 
- .categories .box-container .box span{
-    color:var(--light-color);
-    display: inline-block;
-    padding:.7rem 1rem;
-    border:var(--border);
-    background-color: var(--light-bg);
-    border-radius: .5rem;
-    text-align: center;
- }
- 
- .categories .box-container .box a{
-    margin-left: 1.2rem;
-    color:var(--black);
- }
- 
- .categories .box-container .box a:hover{
-    color:var(--main-color);
-    text-decoration: underline;
- }
- 
- 
- 
- 
+.categories .box-container {
+  border: var(--brdr);
+  border-radius: 0.5rem;
+  background-color: var(--light-bg);
+  padding: 1rem 2rem;
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+}
+
+.categories .box-container .box {
+  padding: 1rem 0;
+  font-size: 2rem;
+}
+
+.categories .box-container .box span {
+  color: var(--black);
+  display: inline-block;
+  padding: 0.7rem 1rem;
+  border: var(--brdr);
+  background-color: var(--light-bg);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.categories .box-container .box a {
+  margin-left: 1.2rem;
+  color: var(--black);
+}
+
+.categories .box-container .box a:hover {
+color: var(--blacker);
+  text-decoration: underline;
+}

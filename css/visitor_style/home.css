@@ -30,7 +30,7 @@
 .home-grid .box-container .box p {
   padding-bottom: 1rem;
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--black);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

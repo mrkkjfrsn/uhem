@@ -123,9 +123,11 @@ if (isset($_POST['submit'])) {
 
 
 
-   <?php include '../components/footer.php'; ?>
 
 
+   <footer class="footer">
+        &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
+    </footer>
 
 
 

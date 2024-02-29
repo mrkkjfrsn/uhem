@@ -76,24 +76,22 @@ if (isset($_POST['submit'])) {
 
 <body>
 
-    <!-- header section starts  -->
-    <?php include '../components/user_header.php'; ?>
-    <!-- header section ends -->
 
-    <section class="form-container">
+    <main>
+        <section class="form-container">
 
-        <form action="" method="post">
-            <h3>register now</h3>
-            <input type="text" name="name" required placeholder="enter your name" class="box" maxlength="50">
-            <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="password" name="cpass" required placeholder="confirm your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
-            <input type="submit" value="register now" name="submit" class="btn">
-            <p>already have an account? <a href="login.php">login now</a></p>
-        </form>
+            <form action="" method="post">
+                <h3>register now</h3>
+                <input type="text" name="name" required placeholder="enter your name" class="box" maxlength="50">
+                <input type="email" name="email" required placeholder="enter your email" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+                <input type="password" name="pass" required placeholder="enter your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+                <input type="password" name="cpass" required placeholder="confirm your password" class="box" maxlength="50" oninput="this.value = this.value.replace(/\s/g, '')">
+                <input type="submit" value="register now" name="submit" class="btn">
+                <p>already have an account? <a href="login.php">login now</a></p>
+            </form>
 
-    </section>
-
+        </section>
+    </main>
 
 
 
@@ -103,10 +101,9 @@ if (isset($_POST['submit'])) {
 
 
 
-
-    <?php include '../components/footer.php'; ?>
-
-
+    <footer class="footer" style=" position: absolute; bottom: 0; left:0; right:0; ">
+        &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
+    </footer>
 
 
 

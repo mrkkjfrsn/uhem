@@ -61,7 +61,7 @@
 .inline-btn:hover,
 .inline-delete-btn:hover,
 .inline-option-btn:hover {
-  background-color: var(--black);
+  background-color: var(--red);
 }
 
 .flex-btn {
