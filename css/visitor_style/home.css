@@ -1,6 +1,8 @@
 :root {
   --main-clr: #af2532;
   --red: #d32f2f;
+  --blue: #4834d4;
+  --light-blue: #6853f5;
   --orange: #f39c12;
   --yellow: #e4910b;
   --black: #34495e;
@@ -30,14 +32,15 @@
 .home-grid .box-container .box p {
   padding-bottom: 1rem;
   font-size: 2rem;
-  color: var(--black);
+  color: var(--black);  
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  text-transform: capitalize;
 }
 
 .home-grid .box-container .box p span {
-  color: var(--main-color);
+  color: var(--main-clr);
 }
 
 .home-grid .box-container .box .flex-box {

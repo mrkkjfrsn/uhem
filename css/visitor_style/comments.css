@@ -35,7 +35,7 @@
 
 .comments-container .add-comment p {
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--main-clr);
   margin-bottom: 1rem;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .comments-container .add-comment p a {
-  color: var(--main-color);
+  color: var(--black);
 }
 
 .comments-container .add-comment p a:hover {
@@ -80,7 +80,8 @@
 .comments-container .user-comments-container .show-comments .post-title {
   margin-bottom: 1rem;
   font-size: 2rem;
-  color: var(--light-color);
+  color: var(--black);
+  text-transform: capitalize;
 }
 
 .comments-container .user-comments-container .show-comments .post-title span {
@@ -116,12 +117,12 @@
   border: var(--brder);
   border-radius: 0.5rem;
   background-color: var(--light-bg);
- color: var(--main-clr);
+  color: var(--main-clr);
 }
 
 .comments-container .user-comments-container .show-comments .comment-user span {
   font-size: 2rem;
-  color: var(--main-color);
+color: var(--black);
 }
 
 .comments-container .user-comments-container .show-comments .comment-user div {
@@ -145,12 +146,12 @@
   width: 100%;
   white-space: pre-line;
   line-height: 1.5;
- border: var(--brdr);
+  border: var(--brdr);
 }
 
 .comments-container .user-comments-container .show-comments textarea {
   resize: none;
-  border: var(--border);
+  border: var(--brdr);
 }
 
 .comment-edit-form {
@@ -158,7 +159,7 @@
 }
 
 .comment-edit-form p {
-  background-color: var(--black);
+  background-color: var(--yellow);
   color: var(--white);
   padding: 1.5rem;
   font-size: 2rem;
@@ -170,7 +171,7 @@
 .comment-edit-form form {
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  border: var(--border);
+  border: var(--brdr);
   padding: 2rem;
   background-color: var(--white);
   box-shadow: var(--box-shadow);
@@ -184,7 +185,7 @@
   width: 100%;
   resize: none;
   background-color: var(--light-bg);
-  border: var(--border);
+  border: var(--brdr);
   border-radius: 0.5rem;
   padding: 1.5rem;
   margin-bottom: 0.5rem;

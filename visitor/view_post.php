@@ -228,7 +228,7 @@ if (isset($_POST['delete_comment'])) {
                      </div>
                   </div>
                   <div class="comment-box" style="<?php if ($fetch_comments['user_id'] == $user_id) {
-                                                      echo 'color:var(--white); background:var(--black);';
+                                                      echo 'color:var(--black);';
                                                    } ?>"><?= $fetch_comments['comment']; ?></div>
                   <?php
                   if ($fetch_comments['user_id'] == $user_id) {

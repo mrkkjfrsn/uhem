@@ -14,7 +14,7 @@
  }
 .footer{
     background-color: var(--white);
-    /* position: relative; */
+    /* position: absolute; */
     border-top: .2rem solid --main-clr;
     /* bottom: 0; left:0; right:0; */
     text-align: center;

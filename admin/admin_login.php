@@ -46,7 +46,7 @@ if (isset($_POST['submit'])) {
    <link rel="stylesheet" href="../css/admin_style/dashboard.css">
    <link rel="stylesheet" href="../css/admin_style/messages.css">
    <link rel="stylesheet" href="../css/admin_style/post.css">
-   <link rel="stylesheet" href="../css/admin_style/responsive_admin.css">s
+   <link rel="stylesheet" href="../css/admin_style/responsive_admin.css">
 
 </head>
 
@@ -69,12 +69,22 @@ if (isset($_POST['submit'])) {
 
    <section class="form-container">
 
+
+      <div>
+         <a href="../visitor/home.php">
+            <h3>Uhem</h3>
+         </a>
+         <p>A home for every topic.</p>
+      </div>
+
+
       <form action="" method="POST">
          <h3>login now</h3>
          <input type="text" name="name" maxlength="20" required placeholder="enter your username" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
          <input type="password" name="pass" maxlength="20" required placeholder="enter your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
          <input type="submit" value="login" name="submit" class="btn">
       </form>
+
 
    </section>
 

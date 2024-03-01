@@ -204,6 +204,8 @@ include '../components/like_post.php';
 
     <!-- custom js file link  -->
     <script src="../js/visitor.js"></script>
+
+    
 </body>
 
 </html>

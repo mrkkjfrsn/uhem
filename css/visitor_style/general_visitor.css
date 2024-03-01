@@ -40,7 +40,8 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: var(--main-color);
+  background-color: var(--light-color);
+  border-radius: 1rem;
 }
 
 html {

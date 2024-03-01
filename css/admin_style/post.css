@@ -3,7 +3,7 @@
   --orange: #f39c12;
   --blue: #4834d4;
   --light-blue: #6853f5;
-  --green: #4cbb17;
+  --green: #009e60;
   --red: #dc143c;
   --ligth-red: #ff3131;
   --light-green: #3ed13e;
@@ -11,7 +11,7 @@
   --black: #34495e;
   --blacker: #191b1d;
   --white: #fff;
-  --light-bg: #f5f5f5;  
+  --light-bg: #f5f5f5;
   --brdr: 0.2rem solid var(--yellow);
   --brder: 0.2rem solid var(--main-clr);
   --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
@@ -103,6 +103,7 @@
   white-space: nowrap;
   padding: 0.5rem 0;
   min-width: 100%;
+  text-transform: capitalize;
 }
 
 .show-posts .box-container .box .posts-content {
@@ -110,14 +111,6 @@
   color: var(--black);
   line-height: 1.5;
   padding: 1rem 0;
-}
-
-.show-posts .box-container .box .posts-content:not(:empty):not(:after) {
-  display: inline;
-}
-
-.show-posts .box-container .box .posts-content:not(:empty):not(:after)::after {
-  content: "...";
 }
 
 .show-posts .box-container .box .icons {
@@ -154,12 +147,12 @@
   color: var(--light-green);
 }
 
-.show-posts  .box-container .box .icons .fa-heart {
+.show-posts .box-container .box .icons .fa-heart {
   margin-right: 0.5rem;
   font-size: 2rem;
   color: var(--red);
 }
-.show-posts  .box-container .box .icons .fa-heart:hover {
+.show-posts .box-container .box .icons .fa-heart:hover {
   color: var(--ligth-red);
 }
 
@@ -187,16 +180,19 @@
 
 .read-post form .title {
   color: var(--black);
-  font-size: 2rem;
+  font-size: 2.3rem;
   margin-top: 1.5rem;
+  text-transform: capitalize;
 }
 
 .read-post form .content {
   line-height: 1.5;
   font-size: 1.8rem;
-  color: var(--light-color);
+  color: var(--black);
   padding: 1rem 0;
   white-space: pre-line;
+  text-align: justify;
+  text-indent: 0;
 }
 
 .read-post form .icons {
@@ -204,7 +200,7 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 0.5rem;
-  border: var(--border);
+  border: var(--brdr);
   background-color: var(--light-bg);
   padding: 1.5rem 2rem;
   margin: 1rem 0;
@@ -215,10 +211,27 @@
 }
 
 .read-post form .icons span {
-  color: var(--main-color);
+  color: var(--black);
 }
 
-.read-post form .icons i {
+/* .read-post form .icons i {
   color: var(--light-color);
   margin-right: 0.5rem;
+} */
+.read-post form .icons .fa-comment {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  color: var(--green);
+}
+.read-post form .icons .fa-comment:hover {
+  color: var(--light-green);
+}
+
+.read-post form .icons .fa-heart {
+  margin-right: 0.5rem;
+  font-size: 2rem;
+  color: var(--red);
+}
+.read-post form .icons.fa-heart:hover {
+  color: var(--ligth-red);
 }

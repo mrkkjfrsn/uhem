@@ -36,7 +36,7 @@ body {
 
 *::selection {
   color: var(--white);
-  background-color: var(--main-color);
+  background-color: var(--light-color);
 }
 
 ::-webkit-scrollbar {
@@ -94,6 +94,26 @@ section {
   padding: 3rem;
   text-align: center;
   width: 52rem;
+
+}
+
+.form-container div {
+  width: 52rem;
+  margin: 5rem;
+  padding-bottom: 19rem;
+
+}
+.form-container div a h3 {
+  font-size: 5rem;
+  color: var(--main-clr);
+  cursor: pointer;
+}
+.form-container div h3:hover{
+  color: var(--red);
+}
+.form-container div p {
+  font-size: 3rem;
+  color: var(--black);
 }
 
 .form-container form h3 {

@@ -170,10 +170,11 @@
 .header .flex .profile p {
   padding-bottom: 0.7rem;
   font-size: 2rem;
-  color: var(--black);
+  color: var(--main-clr);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  font-weight: 600;
 }
 
 .header .flex .profile.active {
