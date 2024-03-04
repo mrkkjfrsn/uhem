@@ -1,54 +1,83 @@
-
 /* media queries  */
 
-@media (max-width:1200px){
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
 
-    html{
-       font-size: 55%;
-    }
-  
-    body{
-       padding-left: 0;
-    }
-  
-    #menu-btn{
-       display: block;
-    }
-  
-    .header{
-       left: -35rem;
-       transition: .2s linear;
-    }
-  
-    .header.active{
-       left: 0rem;
-       box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
-       border-right: none;
-    }
-  
+  body {
+    padding-left: 0;
+  }
+
+  #menu-btn {
+    display: block;
+  }
+
+  .header {
+    left: -35rem;
+    transition: 0.2s linear;
+  }
+
+  .header.active {
+    left: 0rem;
+    box-shadow: 0 0 0 100vw rgba(0, 0, 0, 0.7);
+    border-right: none;
   }
   
-  @media (max-width:450px){
-  
-    html{
-       font-size: 50%;
-    }
-  
-    .flex-btn{
-       flex-flow: column;
-       gap:0;
-    }
-  
-    .heading{
-       font-size: 3rem;
-    }
-  
-    .show-posts .box-container{
-       grid-template-columns: 1fr;
-    }
-  
-    .accounts .box-container{
-       grid-template-columns: 1fr;
-    }
-  
+}
+
+@media (max-width: 1024px) {
+  .form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-left: 30rem;
+
   }
+  .form-container form h3 {
+   font-size: 2rem;
+   color: var(--black);
+   text-transform: capitalize;
+   margin-bottom: 1rem;
+ }
+ .form-container form p {
+   margin: 1rem 0;
+   font-size: 1rem;
+   color: var(--light-color);
+   padding-top: 0.8rem;
+ }
+ .form-container form .box {
+   width: 100%;
+   background-color: var(--light-bg);
+   padding: 1.4rem;
+   font-size: 1.4rem;
+   color: var(--black);
+   margin: 1rem 0;
+   border: var(--brdr);
+   border-radius: 0.5rem;
+ }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .flex-btn {
+    flex-flow: column;
+    gap: 0;
+  }
+
+  .heading {
+    font-size: 3rem;
+  }
+
+  .show-posts .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .accounts .box-container {
+    grid-template-columns: 1fr;
+  }
+}

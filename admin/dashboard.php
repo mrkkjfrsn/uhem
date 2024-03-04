@@ -80,11 +80,11 @@ if (!isset($admin_id)) {
          <div class="box">
             <?php
             $select_deactive_posts = $conn->prepare("SELECT * FROM `posts` WHERE admin_id = ? AND status = ?");
-            $select_deactive_posts->execute([$admin_id, 'deactive']);
+            $select_deactive_posts->execute([$admin_id, 'inactive']);
             $numbers_of_deactive_posts = $select_deactive_posts->rowCount();
             ?>
             <h3><?= $numbers_of_deactive_posts; ?></h3>
-            <p>deactive posts</p>
+            <p>inactive posts</p>
             <a href="view_posts.php" class="btn">see posts</a>
          </div>
 

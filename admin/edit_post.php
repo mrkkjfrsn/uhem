@@ -137,7 +137,7 @@ if (isset($_POST['delete_image'])) {
                <select name="status" class="box" required>
                   <option value="<?= $fetch_posts['status']; ?>" selected><?= $fetch_posts['status']; ?></option>
                   <option value="active">active</option>
-                  <option value="deactive">deactive</option>
+                  <option value="inactive">inactive</option>
                </select>
                <p>post title <span>*</span></p>
                <input type="text" name="title" maxlength="100" required placeholder="add post title" class="box" value="<?= $fetch_posts['title']; ?>">

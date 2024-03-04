@@ -68,7 +68,7 @@ section {
 }
 
 .empty {
-  border: var(--border);
+  border: var(--brdr);
   border-radius: 0.5rem;
   background-color: var(--white);
   padding: 1.5rem;
@@ -85,6 +85,7 @@ section {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+
 }
 
 .form-container form {
@@ -94,21 +95,19 @@ section {
   padding: 3rem;
   text-align: center;
   width: 52rem;
-
 }
 
 .form-container div {
   width: 52rem;
   margin: 5rem;
   padding-bottom: 19rem;
-
 }
 .form-container div a h3 {
   font-size: 5rem;
   color: var(--main-clr);
   cursor: pointer;
 }
-.form-container div h3:hover{
+.form-container div h3:hover {
   color: var(--red);
 }
 .form-container div p {
@@ -127,6 +126,14 @@ section {
   margin: 1rem 0;
   font-size: 2rem;
   color: var(--light-color);
+  padding-top: 0.8rem;
+}
+.form-container form p a {
+  color: var(--main-clr);
+}
+.form-container form p a:hover {
+  color: var(--yellow);
+  text-decoration: underline;
 }
 
 .form-container form p span {
@@ -148,6 +155,3 @@ section {
 .form-container form .box:hover {
   box-shadow: var(--b-shadow);
 }
-
-/* yellow =  #ffb600; */
-/* red = #d32f2f; */

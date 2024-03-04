@@ -40,3 +40,29 @@
  color: var(--brigth-red);
 }
 
+.messages{
+  position: sticky;
+  top: 0;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  padding-left: 32rem;
+  gap: 1rem;
+  justify-content: space-between;
+
+}
+
+.messages span {
+  font-size: 2rem;
+  color: var(--black);
+}
+
+.messages i {
+  font-size: 2.5rem;
+  color: var(--red);
+  cursor: pointer;
+}
+
+.messages i:hover {
+ color: var(--brigth-red);
+}

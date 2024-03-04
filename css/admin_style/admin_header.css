@@ -47,7 +47,9 @@
 .header .profile p {
   margin-bottom: 1.5rem;
   font-size: 2rem;
-  color: var(--black);
+  color: var(--main-clr);
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .header .navbar {
