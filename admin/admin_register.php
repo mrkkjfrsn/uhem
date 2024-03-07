@@ -1,14 +1,7 @@
 <?php
-
 include '../components/connect.php';
 
 session_start();
-
-$admin_id = $_SESSION['admin_id'];
-
-if (!isset($admin_id)) {
-    header('location:admin_login.php');
-};
 
 if (isset($_POST['submit'])) {
 
@@ -89,7 +82,7 @@ if (isset($message)) {
             <input type="password" name="cpass" maxlength="20" required placeholder="confirm your password" class="box" oninput="this.value = this.value.replace(/\s/g, '')">
             <input type="submit" value="register now" name="submit" class="btn">
             <p>Already have an account? <a href="admin_login.php">Log in</a></p>
-
+    
         </form>
 
     </section>
@@ -101,20 +94,3 @@ if (isset($message)) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-    <!-- custom js file link  -->
-    <script src="../js/admin.js"></script>
-
-</body>
-
-</html>

@@ -30,7 +30,7 @@ if (isset($message)) {
         <a href="view_posts.php"><i class="fa-solid fa-eye"></i><span>view post</span></a>
         <a href="admin_accounts.php"><i class="fa-solid fa-user"></i><span>accounts</span></a>
         <a href="../components/admin_logout.php" onclick="return confirm('logout from the website?');"><i class="fa-solid fa-right-from-bracket"></i><span id="logout">logout</span></a>
-
+       
     </nav>
 
     <div class="flex-btn">
