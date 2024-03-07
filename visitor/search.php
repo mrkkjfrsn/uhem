@@ -115,17 +115,10 @@ include '../components/like_post.php';
 
     <?php
     } else {
-        
+
         echo '<section><p class="empty">search something!</p></section>';
     }
     ?>
-
-
-    <footer class="footer" >
-        &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
-    </footer>
-
-
 
     <!-- custom js file link  -->
     <script src="../js/visitor.js"></script>

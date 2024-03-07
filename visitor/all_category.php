@@ -78,6 +78,8 @@ include '../components/like_post.php';
             <div class="box"><span>18</span><a href="category.php?category=business">business</a></div>
             <div class="box"><span>19</span><a href="category.php?category=shopping">shopping</a></div>
             <div class="box"><span>20</span><a href="category.php?category=animations">animations</a></div>
+            <div class="box"><span>21</span><a href="category.php?category=science">science</a></div>
+            <div class="box"><span>22</span><a href="category.php?category=art">art</a></div>
         </div>
 
     </section>

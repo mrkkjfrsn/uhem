@@ -101,14 +101,6 @@ include '../components/like_post.php';
 
 
 
-    <footer class="footer" style=" position: absolute; bottom: 0; left:0; right:0; ">
-        &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
-    </footer>
-
-
-
-
-
     <!-- custom js file link  -->
     <script src="../js/visitor.js"></script>
 

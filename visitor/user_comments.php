@@ -145,14 +145,6 @@ if (isset($_POST['delete_comment'])) {
 
 
 
-   <footer class="footer">
-      &copy; copyright @ <?= date('Y'); ?> by <span><a href="../visitor/home.php">Uhem</a></span> | all rights reserved!
-   </footer>
-
-
-
-
-
    <!-- custom js file link  -->
    <script src="../js/visitor.js"></script>
 

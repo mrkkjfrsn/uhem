@@ -29,15 +29,6 @@ if (isset($_POST['delete'])) {
    header('location:view_posts.php');
 }
 
-if (isset($_POST['delete_comment'])) {
-
-   $comment_id = $_POST['comment_id'];
-   $comment_id = filter_var($comment_id, FILTER_SANITIZE_STRING);
-   $delete_comment = $conn->prepare("DELETE FROM `comments` WHERE id = ?");
-   $delete_comment->execute([$comment_id]);
-   $message[] = 'comment delete!';
-}
-
 ?>
 
 <!DOCTYPE html>
@@ -51,7 +42,7 @@ if (isset($_POST['delete_comment'])) {
 
    <!-- font awesome  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-   
+
    <!-- custome css  -->
    <link rel="stylesheet" href="../css/admin_style/general_admin.css">
    <link rel="stylesheet" href="../css/admin_style/accounts.css">
@@ -137,10 +128,6 @@ if (isset($_POST['delete_comment'])) {
                      </div>
                   </div>
                   <div class="text"><?= $fetch_comments['comment']; ?></div>
-                  <form action="" method="POST">
-                     <input type="hidden" name="comment_id" value="<?= $fetch_comments['id']; ?>">
-                     <button type="submit" class="inline-delete-btn" name="delete_comment" onclick="return confirm('delete this comment?');">delete comment</button>
-                  </form>
                </div>
          <?php
             }
